@@ -1,0 +1,39 @@
+{
+  "$schema": "https://schemas.hawky.pro/assets-manifest/v1.json",
+  "schemaVersion": "happy-wakey.assets.v1",
+  "brand": "Happy Wakey",
+  "assets": [
+    {
+      "path": "branding/app-logo.png",
+      "role": "application-icon-source",
+      "mediaType": "image/png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "437ef6e4f724bbac3b47fa2e104fdc45f1feba6cb5198359a856c72e9d094b8f"
+    },
+    {
+      "path": "branding/app-mark.svg",
+      "role": "application-mark",
+      "mediaType": "image/svg+xml",
+      "width": 64,
+      "height": 64,
+      "sha256": "18dbca6cc234dede856ebebebe6d3e9a01faee345253e1d5a714f6edbde5dde8"
+    },
+    {
+      "path": "branding/app-mark-monochrome.svg",
+      "role": "application-mark-monochrome",
+      "mediaType": "image/svg+xml",
+      "width": 64,
+      "height": 64,
+      "sha256": "2d25b19912ee51ab6147b6307b9c84142f5cdf89e07d35b74ca9709ad56c26ce"
+    },
+    {
+      "path": "branding/wordmark.svg",
+      "role": "horizontal-wordmark",
+      "mediaType": "image/svg+xml",
+      "width": 320,
+      "height": 72,
+      "sha256": "a8755a6d8bb34e83e6256f3e8f0731abb717c4ad647a544097aad7b117c7c0dc"
+    }
+  ]
+}

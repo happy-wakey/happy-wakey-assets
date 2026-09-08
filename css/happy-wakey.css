@@ -1,0 +1,37 @@
+:root {
+  --hawky-purple-900: #35138f;
+  --hawky-purple-700: #4a1db7;
+  --hawky-purple-500: #6b35e8;
+  --hawky-cyan-400: #50d5ff;
+  --hawky-coral-500: #ff6258;
+  --hawky-yellow-400: #ffc928;
+  --hawky-ink-900: #20182e;
+  --hawky-paper-100: #f8f5ee;
+  --hawky-white: #ffffff;
+  --hawky-surface: var(--hawky-paper-100);
+  --hawky-surface-strong: var(--hawky-purple-900);
+  --hawky-text: var(--hawky-ink-900);
+  --hawky-text-on-strong: var(--hawky-white);
+  --hawky-accent: var(--hawky-coral-500);
+  --hawky-signal: var(--hawky-cyan-400);
+  --hawky-wake: var(--hawky-yellow-400);
+  --hawky-radius-small: 0.5rem;
+  --hawky-radius-medium: 1rem;
+  --hawky-radius-large: 1.5rem;
+  --hawky-radius-pill: 999px;
+  --hawky-space-1: 0.25rem;
+  --hawky-space-2: 0.5rem;
+  --hawky-space-3: 0.75rem;
+  --hawky-space-4: 1rem;
+  --hawky-space-6: 1.5rem;
+  --hawky-space-8: 2rem;
+  --hawky-motion-fast: 120ms;
+  --hawky-motion-standard: 220ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --hawky-motion-fast: 0ms;
+    --hawky-motion-standard: 0ms;
+  }
+}
