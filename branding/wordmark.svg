@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 72" role="img" aria-labelledby="title">
+  <title id="title">Happy Wakey</title>
+  <rect x="4" y="4" width="64" height="64" rx="15" fill="#4A1DB7"/>
+  <circle cx="36" cy="44" r="13" fill="#FFC928"/>
+  <path d="M20 34a16 16 0 0 1 32 0M26 21l-5-5m29 5l5-5M36 17v-6M15 56c13-7 29-7 42 0" fill="none" stroke="#FF6258" stroke-width="4" stroke-linecap="round"/>
+  <path d="M31 43c1-2 3-2 4 0m2 0c1-2 3-2 4 0m-9 5c2 3 6 3 8 0" fill="none" stroke="#35138F" stroke-width="2.4" stroke-linecap="round"/>
+  <text x="84" y="46" fill="#20182E" font-family="ui-rounded, system-ui, sans-serif" font-size="34" font-weight="750" letter-spacing="-1">Happy Wakey</text>
+</svg>

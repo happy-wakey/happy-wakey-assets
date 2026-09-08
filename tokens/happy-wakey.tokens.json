@@ -1,0 +1,43 @@
+{
+  "$schema": "https://schemas.hawky.pro/design-tokens/v1.json",
+  "schemaVersion": "happy-wakey.design-tokens.v1",
+  "color": {
+    "purple900": "#35138F",
+    "purple700": "#4A1DB7",
+    "purple500": "#6B35E8",
+    "cyan400": "#50D5FF",
+    "coral500": "#FF6258",
+    "yellow400": "#FFC928",
+    "ink900": "#20182E",
+    "paper100": "#F8F5EE",
+    "white": "#FFFFFF"
+  },
+  "semantic": {
+    "surface": "{color.paper100}",
+    "surfaceStrong": "{color.purple900}",
+    "text": "{color.ink900}",
+    "textOnStrong": "{color.white}",
+    "accent": "{color.coral500}",
+    "signal": "{color.cyan400}",
+    "wake": "{color.yellow400}"
+  },
+  "radius": {
+    "small": "0.5rem",
+    "medium": "1rem",
+    "large": "1.5rem",
+    "pill": "999px"
+  },
+  "space": {
+    "1": "0.25rem",
+    "2": "0.5rem",
+    "3": "0.75rem",
+    "4": "1rem",
+    "6": "1.5rem",
+    "8": "2rem"
+  },
+  "motion": {
+    "fast": "120ms",
+    "standard": "220ms",
+    "reducedMotionFallback": "0ms"
+  }
+}
