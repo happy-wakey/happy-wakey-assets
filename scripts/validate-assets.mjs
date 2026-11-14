@@ -18,6 +18,24 @@ function pngDimensions(buffer) {
   };
 }
 
+export function validateAssetPath(path) {
+  assert.equal(typeof path, 'string');
+  assert.match(path, /^(?:branding|css|tokens)\/[a-z0-9./-]+$/);
+  assert.ok(
+    path.split('/').every((segment) => segment !== '' && segment !== '.' && segment !== '..'),
+    'asset paths must not contain empty, dot, or parent segments',
+  );
+  return path;
+}
+
+export function validateSvgMarkup(svg, width, height) {
+  assert.match(svg, /<title id="title">[^<]+<\/title>/);
+  assert.match(svg, new RegExp(`viewBox="0 0 ${width} ${height}"`));
+  assert.doesNotMatch(svg, /<(?:script|foreignObject)\b/i);
+  assert.doesNotMatch(svg, /\son[a-z]+\s*=/i);
+  assert.doesNotMatch(svg, /(?:href|src)\s*=\s*["']\s*(?:https?:|data:|\/\/|javascript:)/i);
+}
+
 export async function validateAssets() {
   const manifest = JSON.parse(
     await readFile(resolve(root, 'assets.manifest.json'), 'utf8'),
@@ -30,7 +48,7 @@ export async function validateAssets() {
   const seenPaths = new Set();
   const seenRoles = new Set();
   for (const asset of manifest.assets) {
-    assert.match(asset.path, /^(?:branding|css|tokens)\/[a-z0-9./-]+$/);
+    validateAssetPath(asset.path);
     assert.equal(seenPaths.has(asset.path), false, `duplicate path ${asset.path}`);
     assert.equal(seenRoles.has(asset.role), false, `duplicate role ${asset.role}`);
     seenPaths.add(asset.path);
@@ -51,10 +69,7 @@ export async function validateAssets() {
 
     assert.equal(asset.mediaType, 'image/svg+xml');
     const svg = contents.toString('utf8');
-    assert.match(svg, /<title id="title">[^<]+<\/title>/);
-    assert.match(svg, new RegExp(`viewBox="0 0 ${asset.width} ${asset.height}"`));
-    assert.doesNotMatch(svg, /<(?:script|foreignObject)\b/i);
-    assert.doesNotMatch(svg, /(?:href|src)="(?:https?:|data:|\/\/)/i);
+    validateSvgMarkup(svg, asset.width, asset.height);
   }
 
   const tokens = JSON.parse(
